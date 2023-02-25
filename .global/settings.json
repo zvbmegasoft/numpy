@@ -1,0 +1,7 @@
+{
+    "workbench.colorTheme": "Dark+ Python",
+    "workbench.editor.enablePreview": false,
+    "[python]": {
+        "editor.formatOnType": true
+    }
+}
