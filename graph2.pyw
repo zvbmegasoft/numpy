@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
-x = np.linspace(-1, 4, 10)
-y = 3 * x**3 - 13 * x**2 + 12 * x - 3
+x = np.linspace(0.5, 1, 1000)
+y = x - np.cos(x)
 plt.title = "График функции"
 plt.xlabel("x")
 plt.ylabel("y")
