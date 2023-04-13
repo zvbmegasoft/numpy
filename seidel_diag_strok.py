@@ -6,4 +6,4 @@ b = np.array([4.5, 5.6, -3.2])
 x = np.linalg.solve(a, b)
 r = np.allclose(np.dot(a, x), b)
 print(x, r)
-# [ 0.10541962  0.47263511 -0.87967833]
+# [ 2.8100465   0.47263511 -0.87967833] True
