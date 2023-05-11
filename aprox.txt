@@ -1,0 +1,3 @@
+https://pythonpip.ru/examples/podgonka-krivoy-v-python-s-pomoschyu-biblioteki-scipy
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html
+https://habr.com/ru/articles/729048/
