@@ -9,45 +9,35 @@ values_y = array([-4.308, -1.778, -0.268, 1.144, 2.248, 3.273, 4.440, 5.396, 6.3
 
 
 # defining objective functions
-def mapping1(values_x, a, b, c):
-    return a * values_x**2 + b * values_x + c
+def mapping1(values_x, a, b):
+    return a * values_x + b
 
 
 def mapping2(values_x, a, b, c):
-    return a * values_x**3 + b * values_x + c
+    return a * values_x**2 + b * values_x + c
 
 
 def mapping3(values_x, a, b, c):
-    return a * values_x**3 + b * values_x**2 + c
-
-
-def mapping4(values_x, a, b, c):
-    return a * exp(b * values_x) + c
+    return b * values_x**a + c
 
 
 # using the curve_fit() function
 args, _ = curve_fit(mapping1, values_x, values_y)
-a, b, c = args[0], args[1], args[2]
-y_fit1 = a * values_x**2 + b * values_x + c
+a, b = args[0], args[1]
+y_fit1 = a * values_x + b
 print("mapping1")
 print("Arguments: ", args)
 
 args, _ = curve_fit(mapping2, values_x, values_y)
 a, b, c = args[0], args[1], args[2]
-y_fit2 = a * values_x**3 + b * values_x + c
+y_fit2 = a * values_x**2 + b * values_x + c
 print("mapping2")
 print("Arguments: ", args)
 
 args, _ = curve_fit(mapping3, values_x, values_y)
 a, b, c = args[0], args[1], args[2]
-y_fit3 = a * values_x**3 + b * values_x**2 + c
+y_fit3 = b * values_x**a + c
 print("mapping3")
-print("Arguments: ", args)
-
-args, _ = curve_fit(mapping4, values_x, values_y)
-a, b, c = args[0], args[1], args[2]
-y_fit4 = a * exp(values_x * b) + c
-print("mapping4")
 print("Arguments: ", args)
 
 # plotting the graph
