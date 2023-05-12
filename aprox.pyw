@@ -21,14 +21,16 @@ def mapping2(values_x, a, b, c):
 args, _ = curve_fit(mapping1, values_x, values_y)
 a, b, c = args[0], args[1], args[2]
 y_fit1 = a * values_x**2 + b * values_x + c
-print("mapping1")
-print("Arguments: ", args)
+print()
+print("y = a * x^2 + b * x + c")
+print("a =", a, "  b =", b, "  c =", c)
 
 args, _ = curve_fit(mapping2, values_x, values_y)
 a, b, c = args[0], args[1], args[2]
 y_fit2 = b * values_x**a + c
-print("mapping2")
-print("Arguments: ", args)
+print()
+print("y = b * x^a + c")
+print("a =", a, "  b =", b, "  c =", c)
 
 # plotting the graph
 plt.plot(values_x, values_y, "bo", label="y - original")
