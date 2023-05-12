@@ -4,8 +4,8 @@ from numpy import array, exp
 import matplotlib.pyplot as plt
 
 # defining the variables
-values_y = array([11, 10, 12, 14, 15, 15, 14, 13, 14, 11, 10, 11, 7, 9, 8, 6, 5])
-values_x = array(range(len(values_y)))
+values_x = array([0.079, 0.431, 0.782, 1.134, 1.486, 1.838, 2.189, 2.541, 2.893])
+values_y = array([-4.308, -1.778, -0.268, 1.144, 2.248, 3.273, 4.440, 5.396, 6.357])
 
 
 # defining objective functions
