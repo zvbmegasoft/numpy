@@ -26,36 +26,40 @@ def mapping4(values_x, a, b, c):
 
 
 # using the curve_fit() function
-args, covar = curve_fit(mapping1, values_x, values_y)
-print("Arguments: ", args)
-print("Co-Variance: ", covar)
-
 args, _ = curve_fit(mapping1, values_x, values_y)
 a, b, c = args[0], args[1], args[2]
 y_fit1 = a * values_x**2 + b * values_x + c
+print("mapping1")
+print("Arguments: ", args)
 
 args, _ = curve_fit(mapping2, values_x, values_y)
 a, b, c = args[0], args[1], args[2]
 y_fit2 = a * values_x**3 + b * values_x + c
+print("mapping2")
+print("Arguments: ", args)
 
 args, _ = curve_fit(mapping3, values_x, values_y)
 a, b, c = args[0], args[1], args[2]
 y_fit3 = a * values_x**3 + b * values_x**2 + c
+print("mapping3")
+print("Arguments: ", args)
 
 args, _ = curve_fit(mapping4, values_x, values_y)
 a, b, c = args[0], args[1], args[2]
 y_fit4 = a * exp(values_x * b) + c
+print("mapping4")
+print("Arguments: ", args)
 
 # plotting the graph
-plt.plot(values_x, values_y, "bo", label="y - original")
-plt.plot(values_x, y_fit1, label="y = a * x^2 + b * x + c")
-plt.plot(values_x, y_fit2, label="y = a * x^3 + b * x + c")
-plt.plot(values_x, y_fit3, label="y = a * x^3 + b * x^2 * c")
-plt.plot(values_x, y_fit4, label="y = a * exp(b * x) + c")
-plt.xlabel("x")
-plt.ylabel("y")
-plt.legend(loc="best", fancybox=True, shadow=True)
-plt.grid(True)
-plt.show()
+# plt.plot(values_x, values_y, "bo", label="y - original")
+# plt.plot(values_x, y_fit1, label="y = a * x^2 + b * x + c")
+# plt.plot(values_x, y_fit2, label="y = a * x^3 + b * x + c")
+# plt.plot(values_x, y_fit3, label="y = a * x^3 + b * x^2 * c")
+# plt.plot(values_x, y_fit4, label="y = a * exp(b * x) + c")
+# plt.xlabel("x")
+# plt.ylabel("y")
+# plt.legend(loc="best", fancybox=True, shadow=True)
+# plt.grid(True)
+# plt.show()
 
 # https://pythonpip.ru/examples/podgonka-krivoy-v-python-s-pomoschyu-biblioteki-scipy
